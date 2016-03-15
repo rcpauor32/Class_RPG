@@ -13,7 +13,7 @@ int Troll::AtkCalc(Creatures& creature) {
 		atk_power *= 1.5;
 	}
 
-	dmg = atk_power * (atk_speed / TURN_DURATION);
+	dmg = atk_power * (atk_speed / TURN_DURATION) - creature.defense * armor_pen;
 
 	return dmg;
 }
@@ -37,7 +37,7 @@ int Goblin::AtkCalc(Creatures& creature) {
 
 int Hero::AtkCalc(Creatures& creature) {
 	int dmg;
-	dmg = atk_power * (atk_speed / TURN_DURATION);
+	dmg = atk_power * (atk_speed / TURN_DURATION) - creature.defe;
 
 	return dmg;
 }
