@@ -5,39 +5,12 @@ Troll::Troll(CreatureTypes c_type, int health, char n[12], int atkp, int atks, i
 
 };
 
-int Troll::AtkCalc(Creatures& creature) {
+int Creatures::AtkCalc(Creatures offense, Creatures& defense) {
 	int dmg;
 	
-	switch (creature.type) {
-	case goblin_t:
-		atk_power *= 1.5;
-	}
-
+	if (offense.type == goblin_t && defense.type = )
+	
 	dmg = atk_power * (atk_speed / TURN_DURATION) - creature.defense * armor_pen;
-
-	return dmg;
-}
-
-int Goblin::AtkCalc(Creatures& creature) {
-	int dmg;
-	
-	switch (creature.type) {
-	case hero_t:
-		atk_power *= 1.3;
-		break;
-	case troll_t:
-		atk_power *= .8;
-		break;
-	}
-
-	dmg = (atk_power * (atk_speed / TURN_DURATION)) - creature.defense * armor_pen;
-
-	return dmg;
-}
-
-int Hero::AtkCalc(Creatures& creature) {
-	int dmg;
-	dmg = atk_power * (atk_speed / TURN_DURATION) - creature.defe;
 
 	return dmg;
 }

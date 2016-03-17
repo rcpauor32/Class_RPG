@@ -11,7 +11,7 @@ public:
 	int atk_power;
 	int atk_speed;
 
-	int AtkCalc(Creatures&);
+	int AtkCalc(Creatures offense, Creatures& defense);
 
 };
 
