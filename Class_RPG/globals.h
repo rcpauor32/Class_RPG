@@ -1,7 +1,10 @@
-#define TURN_DURATION 10
+#ifndef  _GLOBALS_H_
+#define	 _GLOBALS_H_
 
 enum CreatureTypes {
-	hero_t,
-	goblin_t,
-	troll_t
+	HERO,
+	GOBLIN,
+	TROLL
 };
+
+#endif

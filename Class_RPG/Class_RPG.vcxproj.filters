@@ -29,5 +29,11 @@
     <ClInclude Include="globals.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="kill_count.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Alliances.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

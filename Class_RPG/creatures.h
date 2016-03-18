@@ -1,29 +1,35 @@
-#include "globals.h"
+#ifndef _CREATURES_H_
+#define	_CREATURES_H_
 
-class Creatures {
+#include "globals.h"
+#include "kill_count.h"
+#include "Alliances.h"
+
+class Creature {
 public:
 	int hp;
 	char name[12];
 	CreatureTypes type;
 
-	int defense;
-	int armor_pen;
-	int atk_power;
-	int atk_speed;
+	unsigned int defense;
+	unsigned int armor_pen;
+	unsigned int atk_power;
+	unsigned int atk_speed;
 
-	int AtkCalc(Creatures offense, Creatures& defense);
+public:
+	int AtkCalc(Creature victim);
+	int CalcEffectiveness(CreatureTypes att_type, CreatureTypes vict_type);
+	
+	Creature(CreatureTypes c_type, int health, char n[12], int atkp, int atks, int def);
+	virtual ~Creature();
 
 };
 
-class Troll : public Creatures {
-	Troll(CreatureTypes c_type, int health, char n[12], int atkp, int atks, int def);
+class Troll : public Enemy {
+	int regen;
 
+class Goblin : public Enemy {
+	int poison;
 };
 
-class Goblin : public Creatures {
-	Goblin(CreatureTypes c_type, int health, char n[12], int atkp, int atks, int def);
-};
-
-class Hero : public Creatures {
-	Hero(CreatureTypes c_type, int health, char n[12], int atkp, int atks, int def);
-};
+#endif

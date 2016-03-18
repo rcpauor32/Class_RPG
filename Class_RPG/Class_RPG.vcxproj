@@ -68,8 +68,10 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Alliances.h" />
     <ClInclude Include="creatures.h" />
     <ClInclude Include="globals.h" />
+    <ClInclude Include="kill_count.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
